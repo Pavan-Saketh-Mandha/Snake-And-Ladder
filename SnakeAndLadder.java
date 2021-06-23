@@ -9,7 +9,7 @@
  */
 
 import java.util.*;
-public class SnakeAndLadderUC2
+public class SnakeAndLadder
 {
 	//System.out.println();
 	public static void main(String[] args) 
