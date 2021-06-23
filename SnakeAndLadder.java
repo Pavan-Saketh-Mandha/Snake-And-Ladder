@@ -9,21 +9,59 @@
  */
 
 import java.util.*;
-public class SnakeAndLadderUC4
+public class SnakeAndLadderUC7
 {
 	//System.out.println();
 	public static void main(String[] args) 
 	{
-		int start_position = 0;
+	    int start_position = 0;
 		int player_position = 0;
 		int final_position = 100;
 		int countDice = 0;
+		int player1 = 0;
+		int player2 = 0;
+		int countplayer1 = 0;
+		int countplayer2 = 0;
 		int i = 0;
-		System.out.println(" WELCOME - Snake And Ladder - SINGLE player");
-		System.out.println("Player is at Start position: "  + start_position);
+     while (player_position < final_position) 
+		{
+            System.out.println("Player-1 has rolled the dice.");
+            player1 = diceroll(player_position,final_position);
+            System.out.println("Position of the player-1 is: " + player1);
+			countDice++;
+			System.out.println();
+			System.out.println("-----------------------------");
+            System.out.println("Player-2 has rolled the dice.");
+            player2 = diceroll(player_position,final_position);
+            System.out.println("Position of the player-2 is: " + player2);
+			countDice++;
+			System.out.println();
+			System.out.println("-----------------------------");
+       if (player1 <= final_position) {
+                System.out.println("*$* Player 1 has reached final position: " + player_position);
+		        System.out.println("*$* CONGRATULATIONS* Player 1 Has WON the GAME");
+	            System.out.println("Player 1 rolled the Dice : " + countDice + " : times to complete the game");
+		        System.out.println("*** GAME COMPLETED ***");
+            }
+            else if (player2 <= final_position) {
+                System.out.println("*$* Player 2 has reached final position: " + player_position);
+		        System.out.println("*$* CONGRATULATIONS* Player 2 Has WON the GAME");
+	            System.out.println("Player 2 rolled the Dice : " + countDice + " : times to complete the game");
+		        System.out.println("*** GAME COMPLETED ***");
+            }	     	
 
- while (player_position < final_position)
-  {
+		}
+	}
+ 
+ static int diceroll(int player_position , int final_position)
+	{
+	    int start_position = 0;
+		int countDice = 0;
+		int player1 =0;
+		int player2 =0;
+		int i = 0;
+  while (player_position < final_position)
+		{
   for (i = player_position ; i < final_position ; i++ )
     {
 		int Dice = (int)((Math.random() * 6) + 1);
@@ -70,17 +108,7 @@ public class SnakeAndLadderUC4
 		}
 		break;
  }//player_position < final_pos check end
-}
-
-System.out.println("------------------------------------");
-
-if (player_position == final_position)
-      {
-	     System.out.println("*$*Player has reached final position: " + player_position);
-		 System.out.println("*$*CONGRATULATIONS*-Player Has WON the GAME");
-	     System.out.println("Player rolled the Dice : " + countDice + " : times to complete the game");
-		 System.out.println("*** GAME COMPLETED ***");
-		 
-}
-}
+	}
+	return player_position;
+	}
 }
