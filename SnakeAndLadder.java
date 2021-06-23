@@ -9,15 +9,14 @@
  */
 
 import java.util.*;
-public class SnakeAndLadderUC2
+public class SnakeAndLadderUC1
 {
-	//System.out.println();
+	//System.out.println()
 	public static void main(String[] args) 
 	{
+		System.out.println("WELCOME - Snake And Ladder - SINGLE player");
 		int start_position = 0;
-		System.out.println(" WELCOME - Snake And Ladder - SINGLE player");
-		System.out.println("Player is at Start position: "  + start_position);
-		int Dice = (int)((Math.random() * 6) + 1);
-		System.out.println("Output after rolling Dice: " + Dice);
+		System.out.println("Player is at position: "  + start_position);
+	
 	}
 }
