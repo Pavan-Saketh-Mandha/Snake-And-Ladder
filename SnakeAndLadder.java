@@ -9,7 +9,7 @@
  */
 
 import java.util.*;
-public class SnakeAndLadderUC6
+public class SnakeAndLadderUC4
 {
 	//System.out.println();
 	public static void main(String[] args) 
@@ -76,8 +76,8 @@ System.out.println("------------------------------------");
 
 if (player_position == final_position)
       {
-	     System.out.println("*$* Player has reached final position: " + player_position);
-		 System.out.println("*$* CONGRATULATIONS* Player Has WON the GAME");
+	     System.out.println("*$*Player has reached final position: " + player_position);
+		 System.out.println("*$*CONGRATULATIONS*-Player Has WON the GAME");
 	     System.out.println("Player rolled the Dice : " + countDice + " : times to complete the game");
 		 System.out.println("*** GAME COMPLETED ***");
 		 
